@@ -1,51 +1,198 @@
-body {
-    background: #2B4141;
-    filter: brightness(180%);
-}
-
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-[src] {
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 9px gray;
-    margin: 4px;
-}
-.flex-box-container {
-    display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 
-  height: 1260px;
-  width: 540px;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: space-between;
-  overflow: scroll;
-
-}
-.heading-one {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    background: #161925;
-    margin: 10px;
-    padding: 20px;
-    width: 600px;
+main {
+    background: grey;
+    height: 2350px;
+    width: 900px;
     margin-left: auto;
     margin-right: auto;
-    height: 100px;
-    line-height: 1.8;
-    text-align: center;
+    margin-bottom: 20px;
+    overflow: scroll;
     
-    border-bottom: 5px solid yellow;
+}
+div.start {
+    background: #331E38;
+    width: 800px;
+    height: 400px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 9.9;
+    text-transform: capitalize;
+    font-size: 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+i {
+   
+}
+header h1 {
+    color: orangered;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+
+}
+header > h3 {
+    color: orangered;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-bottom: 50px;
+}
+
+span.logo{
+float: right;
+letter-spacing: 25px;
+color: white;
+font-size: 25px;
+position: relative;
+bottom: 45px;
+right: 20px;
+}
+.span-one {
+    color: white;
+   display: block;
+   margin-left: 20px;
+}
+.div-period {
+    font-style: italic;
+    color: wheat;
+    margin-left: 20px;
+}
+.content {
+    display: grid;
+   grid-template-columns: repeat(3,200px);
+   grid-template-rows: repeat(3,200px);
+    grid-gap: 50px;
+    
+   
+}
+.s {
+    font-size: 4rem;
+    color: orangered;
+    position: relative;
+    top: 10px;
+}
+.First-paragraph {
+    color: white;
+    position: relative;
+    top: 2px;
+    left: 60px;
+    line-height: 1.2;
+    
+}
+.Second-paragraph {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    color: white;
+    line-height: 1.2;
+}
+.Third-paragraph {
+    position: relative;
+    top: 50px;
+    left: 70px;
+    float: right;
+    color: white;
+    margin-right: -60px;
+    line-height: 1.7;
+}
+.under-score {
+ border-top: 0.5px solid white;
+ border-bottom: 0.5px solid white;
+ font-size: 1.5rem;
+ margin-top: 6px;
+ display: block;
+ margin-bottom: 6px;
+text-align: center;
+ color: #85C7DE;
+}
+
+.heading-three  {
+   color: #85C7DE; 
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 20px;
+}
+
+sub {
+  color: #85C7DE;
+    font-size: 1.2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+p {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.main-content {
+    width: 280px;
+    margin-left: 30px;
+}
+#img-1 {
+    float: right;
+    position: relative;
+    bottom: 650px;
+   margin-right: 20px;
+}
+#img-2 {
+    float: right;
+    position: relative;
+    bottom: 320px;
+    left: 300px;
+}
+.last-quote {
+  
+    position: relative;
+  bottom: 710px;
+  left: 700px;
+  width: 150px;
+  height: 100px;
+  margin-left: 20px;
+  line-height: 1.2;
+  display: block;
+  color: #85C7DE;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.3rem;
+  border-bottom: 10px;
+
+}
+
+/* Default styles for #img-3 */
+#img-3 {
+    position: absolute;
+    left: 410px;
+    
+    width: 530px;
+    top: 2045px;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    #img-3 {
+        position: absolute; /* Change to relative for better mobile positioning */
+        margin-top: 0px; /* Adjust top margin for mobile */
+        width: 145%; /* Make the image take full width */
+        left: 330px; /* Align it to the left of the screen */
+        bottom: 2700px; /* Let the browser determine the position on mobile */
+        height: 40%;
+    }
 }
 
 
+
+
+q {
+    border-top: 0.5px solid white;
+    border-bottom: 0.5px solid white;
+    font-size: 1.5rem;
+    margin-top: 6px;
+    display: block;
+    margin-bottom: 6px;
+   text-align: center;
+    color: #85C7DE;  
+}
