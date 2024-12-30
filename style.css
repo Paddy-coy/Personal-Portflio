@@ -1,103 +1,328 @@
-* {
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+      overflow-x: hidden; /* Disable horizontal scrolling */
+      background: black;
+     
 }
+
+main {
+    background-image: url('https://images.pexels.com/photos/29878674/pexels-photo-29878674/free-photo-of-stylish-couple-in-urban-setting-wearing-leather.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: -20px;
+   box-shadow: 20px 20px 20px;
+ filter: saturate(50%);
+   
+}
+ 
 :root {
-    --border:2px solid;
-    --height:180vh;
-    --margin:20px;
-    --width:800px;
-    
+    --padding-top:60px;
+    --padding-bottom:40px;
+
 }
-.main-content {
-    border: var(--border);
-    height: var(--height);
-    margin: var(--margin);
-    width: var(--width);
+
+
+
+:is(.heading-1) {
+    text-shadow: 4px 4px 4px blue;
+    color: blue;
+    text-align: center;
+    text-decoration: underline;
+    padding: 20px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   letter-spacing: 2px;
+ margin-bottom: -60px;
+   background: grey;
+}
+:is(.heading-1):hover {
+    color: aqua;
+}
+.link-page {
+    background: grey;
+   padding-bottom: var(--padding-bottom);
+
+   padding: var(--padding-top);
+}
+ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+   
+   
+}
+.first-link {
+    text-decoration: none;
+    background: #B8E0D2;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    height: calc(20px *4);
+    font-size: 2rem;
+    margin: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: 10px 10px 10px;
+    text-shadow: 2px 2px 4px;
+    position: relative;
+    top: 62px;
+    text-transform: capitalize;
+   line-height: 1.2;
+}
+:is(.first-link):hover {
+    color: cadetblue;
+}
+#contact {
+    position: relative;
+    left: 55px;
+}
+#home {
+    position: relative;
+    right: 10px;
+}
+.portion-page {
+   width: 300px;
+   height: 450px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 10px 10px 10px gray;
-    
-    border-radius: calc(7px *2);
-   position: sticky;
-   left: 20%;
-   top: 50%;
-}
-header {
+    text-align: center;
+    background: gray;
+    padding-top: 30px;
+    margin-top: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 40px;
-    line-height: 1.9;
+    line-height: 0.9;
+    box-shadow: 10px 10px 10px gray;
+    border-radius: 50px;
+    transition: all 4s;
+    position: relative;
+    left: 40px;
+    bottom: 200px;
 }
-div.number {
-    display: flex;
-   
-    justify-content: flex-end;
-    align-content: flex-end;
-   margin-right: 20px;
-   gap: 30px;
-   background: #14453D;
-   color: white;
-   font-size: 1.3rem;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   width: 797px;
-   height: 50px;
-   line-height: 2.4;
+
+.section-page {
+    width: 300px;
+   height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: gray;
+    padding-top: 30px;
+    margin-top: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 0.9;
+    box-shadow: 10px 10px 10px gray;
+    border-radius: 50px;
+    transition: all 4s;
+    position: relative;
+    left: 40px;
+    bottom: 200px;
+}
+
+
+
+
+
+
+.first-p-tag,.second-p-tag {
+    color: chartreuse;
+    font-style: italic;
+    font-family: monospace;
+    font-size: 0.9rem;
+   background-image: url('https://images.pexels.com/photos/26052213/pexels-photo-26052213/free-photo-of-young-woman-with-an-umbrella.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load');
+   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  mix-blend-mode: soft-light;
+  box-shadow: 5px 5px 5px black;
+  height: 110vh;
+  width: 32vw;
+  margin: 10px;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 9px;
+  transition: all 5s;
+  line-height: 0.9;
   
 }
-.assets,.liability {
+:is(h2):hover {
+    color:cadetblue;
+}
+h2 {
+    color: greenyellow;
+    text-shadow: 3px 4px 4px green;
+}
+
+
+/* For Mobile Devices (Up to 768px width) */
+@media (max-width: 768px) {
+    main {
+        margin-bottom: 50px;
+        padding: 10px;
+    }
+
+    .heading-1 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .link-page ul {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center;
+    }
+
+    .first-link {
+        width: 100%; /* Full width links for easier tapping */
+        font-size: 1.2rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .portion-page,.section-page {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        font-size: 1rem;
+        position: relative;
+        left: 40px;
+        bottom: 10px;
+    }
+
+    .first-p-tag, .second-p-tag {
+        width: 90%;
+        height: auto;
+        font-size: 0.8rem;
+        line-height: 1.2;
+    }
+}
+
+/* For Desktop Devices (Above 1024px width) */
+@media (min-width: 1024px) {
+    main {
+        max-width: 1300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .heading-1 {
+        font-size: 2.5rem;
+        padding: 20px;
+     
+    } 
+    header {
+        margin-bottom: 370px;
+    }
+
+    .link-page ul {
+        justify-content: space-evenly;
+    }
+
+    .first-link {
+        width: 250px;
+        font-size: 1.5rem;
+        margin: 20px;
+    }
+
+    .portion-page,.section-page {
+        width: 600px;
+        height: auto;
+        padding: 30px;
+        font-size: 1.2rem;
+    }
+
+    .first-p-tag, .second-p-tag {
+        width: 80%;
+        height: auto;
+        font-size: 1rem;
+        margin: 20px auto;
+    }
+}
+
+form {
+ 
+ margin-left: 50px;
+
+}
+
+label {
+    font-size: 2rem;
+    color: white;
+    display: flex;
     font-family: Arial, Helvetica, sans-serif;
-    color: #59C3C3;
-    font-size: 1.5rem;
-    padding: 20px;
+    margin-bottom: 40px;
+    margin-left: auto;
+ margin-right: auto;
+   
 }
-:is(p) {
-    font-size: 1.1rem;
-    font-style: oblique;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative;
-    left: 6px;
-    padding: 20px;
+input,optgroup,label {
+    display: flex;
+    
+    
 }
-.span {
-   background: rgba(19, 221, 29, 0.902);
-   display: block;
-   width: 720px;
-   height: 40px;
-   margin-left: 20px;
-   color: white;
-   font-size: 1.3rem;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   line-height: 1.8;
-   gap: 90px;
-   padding-left: 10px;
+
+button {
+    outline: 4px solid green;
+  margin: 10px;
 }
-.dollar {
-  float: right;
-    margin: 20px;
-    line-height: 0.5;
+input {
+    outline: 4px solid green;
+    
+    
 }
- .spun {
-  background-color: none;
-  width: 720px;
-  height: 40px;
-  margin-left: 20px;
-  color: black;
+.radio-link {
+    outline: none;
+    margin-bottom: 20px;
+}
+h3 {
+    color: yellow;
+    font-size: 2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+h3::after {
+    content: '👋👋';
+}
+
+footer a {
+ 
+  display: block;
+  margin: 20px;
+  text-decoration: none;
   font-size: 1.3rem;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.8;
-  gap: 90px;
-  padding-left: 10px;
- }
- hr {
-    width: 785px;
- }
- .spun {
-  color:black;
-  background: transparent;
- }
- .hover:hover {
-    background: #59C3C3;
-   width: 700px;
-   display: block;
- }
+  font-family: monospace;
+  text-align: center;
+  background: grey;
+  width: 200px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.9;
+  box-shadow: 5px 5px 5px green;
+}
+.p {
+    color: cadetblue;
+    position: relative;
+    top: 100px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: monospace;
+}
+a:visited {
+    color: green;
+}
+footer,#information{
+background: url('https://images.pexels.com/photos/29978983/pexels-photo-29978983/free-photo-of-portrait-of-young-woman-with-short-hair-outdoors.jpeg?auto=compress&cs=tinysrgb&w=600');
+background-position: top;
+background-repeat: no-repeat;
+background-size: cover;
+margin-bottom: -18px;
+
+
+}
+footer {
+    padding-top: 20px;
+}
